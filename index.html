@@ -1,25 +1,650 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="cache-control" content="max-age=3600" />
-    <title>Contact</title>
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="/Base.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/assets/fonts/_families%3dSF+Pro%2cv1_7CSF+Pro+Icons%2cv1html.html" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH1QTWEN1J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PH1QTWEN1J');
-    </script>
-    <script src="/vendor/jquery/jquery-1.12.0.min.js"></script>
-  <script type="module" crossorigin src="/assets/index-w9leby3C.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mindful Golden Life | Meditation & Wellness for Adults Over 50</title>
+<meta name="description" content="Explore mindfulness, meditation, stress relief, emotional wellness, and peaceful living tips designed for adults over 50." />
+<meta name="keywords" content="mindfulness, meditation, seniors, over 50, stress relief, emotional wellness, peaceful living, healthy aging" />
+<meta name="author" content="Mindful Golden Life" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mindful Golden Life | Meditation & Wellness for Adults Over 50" />
+<meta property="og:description" content="Mindfulness, meditation, and peaceful living for adults over 50." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1200" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mindful Golden Life" />
+<meta name="twitter:description" content="Mindfulness and meditation for adults over 50." />
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          heading: ['Fraunces', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        colors: {
+          sage: { 50:'#f4f7f3', 100:'#e6ede2', 200:'#cdd9c5', 300:'#a8bd9c', 400:'#86a079', 500:'#6a8760', 600:'#54704c', 700:'#44593e', 800:'#384934', 900:'#2f3d2c' },
+          cream: '#faf6ef',
+          beige: '#ece3d3',
+          gold:  '#c9a35b',
+          lavender: '#bfb1cc',
+        }
+      }
+    }
+  }
+</script>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mindful Golden Life",
+  "url": "https://mindfulgoldenlife.com",
+  "email": "mindfulgoldenlife@gmail.com",
+  "telephone": "(505) 555-3904",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "711 Sunrise Valley Rd",
+    "addressLocality": "Santa Fe",
+    "addressRegion": "NM",
+    "postalCode": "87501",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<!-- Google Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J046JXWVC"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4J046JXWVC');
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #faf6ef; color: #2f3d2c; font-size: 17px; line-height: 1.7; }
+  h1,h2,h3,h4 { font-family: 'Fraunces', serif; }
+  .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  .accordion-content.open { max-height: 2000px; }
+  .page { display: none; }
+  .page.active { display: block; }
+  .nav-link.active { color: #44593e; font-weight: 600; }
+  img { max-width: 100%; height: auto; }
+  .fade-in { animation: fadeIn 0.5s ease; }
+  @keyframes fadeIn { from {opacity:0; transform: translateY(8px);} to {opacity:1; transform: none;} }
+</style>
 </head>
-<body>
-    <div id="root"></div>
+<body class="font-body">
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-beige">
+  <nav class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+    <a href="#/" class="flex items-center gap-2 text-xl font-heading font-semibold text-sage-700">
+      <span class="text-2xl">🌿</span> Mindful Golden Life
+    </a>
+    <button id="menuBtn" class="md:hidden text-sage-700 text-2xl">☰</button>
+    <ul id="navList" class="hidden md:flex items-center gap-7 text-sage-800">
+      <li><a href="#/" class="nav-link hover:text-sage-600 transition">Home</a></li>
+      <li><a href="#/about" class="nav-link hover:text-sage-600 transition">About</a></li>
+      <li><a href="#/blog" class="nav-link hover:text-sage-600 transition">Blog</a></li>
+      <li><a href="#/meditation" class="nav-link hover:text-sage-600 transition">Meditation Guides</a></li>
+      <li><a href="#/community" class="nav-link hover:text-sage-600 transition">Community</a></li>
+      <li><a href="#/contact" class="nav-link hover:text-sage-600 transition">Contact</a></li>
+    </ul>
+  </nav>
+  <ul id="mobileMenu" class="hidden md:hidden bg-cream border-t border-beige px-5 py-3 space-y-2 text-sage-800">
+    <li><a href="#/" class="block py-1">Home</a></li>
+    <li><a href="#/about" class="block py-1">About</a></li>
+    <li><a href="#/blog" class="block py-1">Blog</a></li>
+    <li><a href="#/meditation" class="block py-1">Meditation Guides</a></li>
+    <li><a href="#/community" class="block py-1">Community</a></li>
+    <li><a href="#/contact" class="block py-1">Contact</a></li>
+  </ul>
+</header>
+
+<main id="app"></main>
+
+<!-- FOOTER -->
+<footer class="bg-sage-800 text-cream mt-20">
+  <div class="max-w-7xl mx-auto px-5 py-14 grid md:grid-cols-4 gap-10">
+    <div>
+      <h3 class="text-xl font-heading mb-3">🌿 Mindful Golden Life</h3>
+      <p class="text-sm text-sage-100/80">A peaceful space for mindfulness, meditation, and joyful living after 50.</p>
+    </div>
+    <div>
+      <h4 class="font-heading text-lg mb-3">Explore</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#/blog" class="hover:text-gold">Blog</a></li>
+        <li><a href="#/meditation" class="hover:text-gold">Meditation Guides</a></li>
+        <li><a href="#/community" class="hover:text-gold">Community</a></li>
+        <li><a href="#/category/mindfulness-basics" class="hover:text-gold">Mindfulness Basics</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-heading text-lg mb-3">Categories</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#/category/guided-meditation" class="hover:text-gold">Guided Meditation</a></li>
+        <li><a href="#/category/stress-relief" class="hover:text-gold">Stress Relief</a></li>
+        <li><a href="#/category/emotional-wellness" class="hover:text-gold">Emotional Wellness</a></li>
+        <li><a href="#/category/peaceful-living" class="hover:text-gold">Peaceful Living</a></li>
+        <li><a href="#/category/healthy-aging" class="hover:text-gold">Healthy Aging</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-heading text-lg mb-3">Contact</h4>
+      <ul class="space-y-2 text-sm text-sage-100/80">
+        <li>📧 mindfulgoldenlife@gmail.com</li>
+        <li>📞 (505) 555-3904</li>
+        <li>📍 711 Sunrise Valley Rd, Santa Fe, NM 87501</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-sage-700">
+    <div class="max-w-7xl mx-auto px-5 py-5 flex flex-col md:flex-row md:justify-between items-center gap-3 text-sm text-sage-100/80">
+      <p>© <span id="year"></span> Mindful Golden Life. All rights reserved.</p>
+      <ul class="flex flex-wrap gap-4">
+        <li><a href="#/privacy" class="hover:text-gold">Privacy</a></li>
+        <li><a href="#/terms" class="hover:text-gold">Terms</a></li>
+        <li><a href="#/refund" class="hover:text-gold">Refund</a></li>
+        <li><a href="#/about" class="hover:text-gold">About</a></li>
+        <li><a href="#/contact" class="hover:text-gold">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" class="hidden fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-md bg-white border border-beige shadow-lg rounded-2xl p-5 z-50">
+  <p class="text-sm text-sage-800 mb-3">We use cookies to enhance your peaceful browsing experience and analyze site traffic. By continuing, you agree to our <a href="#/privacy" class="underline text-sage-600">Privacy Policy</a>.</p>
+  <div class="flex gap-3">
+    <button onclick="acceptCookies()" class="bg-sage-600 hover:bg-sage-700 transition text-white px-4 py-2 rounded-full text-sm">Accept</button>
+    <button onclick="declineCookies()" class="border border-sage-300 text-sage-700 px-4 py-2 rounded-full text-sm hover:bg-sage-50 transition">Decline</button>
+  </div>
+</div>
+
+<script>
+// ---------------- IMAGES ----------------
+const IMG = {
+  hero: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=1400&q=80',
+  meditation1: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80',
+  meditation2: 'https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=900&q=80',
+  meditation3: 'https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=900&q=80',
+  yoga: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=900&q=80',
+  nature: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
+  sunrise: 'https://images.unsplash.com/photo-1470114716159-e389f8712fda?w=1200&q=80',
+  senior1: 'https://images.unsplash.com/photo-1559963110-71b394e7494d?w=600&q=80',
+  senior2: 'https://images.unsplash.com/photo-1581579438747-104c53e7a45e?w=600&q=80',
+  senior3: 'https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=600&q=80',
+  senior4: 'https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=600&q=80',
+  seniorCouple: 'https://images.unsplash.com/photo-1447968025828-c4c578d18888?w=900&q=80',
+  tea: 'https://images.unsplash.com/photo-1481833761820-0509d3217039?w=900&q=80',
+  garden: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80',
+  breathing: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&q=80',
+  community: 'https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=900&q=80',
+  walking: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&q=80',
+  candle: 'https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?w=900&q=80',
+  forest: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80',
+};
+
+// ---------------- DATA ----------------
+const CATEGORIES = [
+  { slug:'mindfulness-basics', title:'Mindfulness Basics', desc:'Gentle beginnings — learn how to be fully present in everyday moments.', img: IMG.tea },
+  { slug:'guided-meditation', title:'Guided Meditation', desc:'Soothing routines and step-by-step practices for calm clarity.', img: IMG.meditation1 },
+  { slug:'stress-relief', title:'Stress Relief', desc:'Practical tools to ease tension and restore inner balance.', img: IMG.breathing },
+  { slug:'emotional-wellness', title:'Emotional Wellness', desc:'Nurture your heart with kindness, gratitude, and resilience.', img: IMG.senior2 },
+  { slug:'peaceful-living', title:'Peaceful Living', desc:'Design a slow, intentional life that feels gentle and full.', img: IMG.garden },
+  { slug:'healthy-aging', title:'Healthy Aging', desc:'Move, rest, and thrive — wellness wisdom for your golden years.', img: IMG.yoga },
+];
+
+const ARTICLES = [
+  { slug:'simple-meditation-routines', title:'Simple Meditation Routines for Beginners', cat:'guided-meditation', img: IMG.meditation2, excerpt:'Start your meditation journey with calm, easy routines designed for those new to mindfulness.', body:`<p>Meditation does not have to be complicated. For beginners over 50, the simplest path is often the most rewarding. Begin by setting aside just five quiet minutes each morning.</p><p>Sit comfortably in a chair with your feet flat on the floor. Close your eyes gently and breathe naturally. Notice the air entering and leaving your nostrils. When thoughts wander — and they will — softly return your attention to the breath.</p><h3 class="text-2xl mt-6 mb-2">A Gentle 5-Minute Routine</h3><ol class="list-decimal pl-6 space-y-2"><li>Sit upright, shoulders relaxed.</li><li>Inhale for 4 counts, exhale for 6.</li><li>Place one hand on your chest, one on your belly.</li><li>Notice sensations without judgment.</li><li>End with a small smile and a moment of gratitude.</li></ol><p class="mt-4">With practice, you may extend to 10 or 20 minutes. Consistency matters more than length.</p>` },
+  { slug:'stress-relief-after-retirement', title:'Stress Relief Tips After Retirement', cat:'stress-relief', img: IMG.walking, excerpt:'Retirement opens new chapters — learn how to release lingering stress and embrace ease.', body:`<p>Retirement is a beautiful transition, but it can stir unexpected feelings — restlessness, loss of routine, or even loneliness. The good news: these feelings respond well to gentle care.</p><p>Daily walking, even 15 minutes, is one of the most powerful stress relievers available. Pair it with deep breathing and exposure to natural light.</p><h3 class="text-2xl mt-6 mb-2">Three Calming Habits</h3><ul class="list-disc pl-6 space-y-2"><li>Morning sunlight within 30 minutes of waking.</li><li>A consistent "wind-down" hour before bed.</li><li>One small social connection daily — a call, a smile, a card.</li></ul>` },
+  { slug:'mindful-morning-habits', title:'Mindful Morning Habits for Seniors', cat:'mindfulness-basics', img: IMG.sunrise, excerpt:'Begin your day with intention through soothing rituals that nourish body and mind.', body:`<p>How you begin your morning shapes your entire day. Mindful mornings do not require complicated routines — they are simply moments of awareness woven into what you already do.</p><h3 class="text-2xl mt-6 mb-2">A Peaceful Morning Flow</h3><ol class="list-decimal pl-6 space-y-2"><li>Wake without immediately reaching for your phone.</li><li>Sip warm water or tea slowly.</li><li>Take five mindful breaths near a window.</li><li>Stretch gently for two minutes.</li><li>Write one sentence of gratitude.</li></ol>` },
+  { slug:'peaceful-living-everyday', title:'Peaceful Living in Everyday Life', cat:'peaceful-living', img: IMG.garden, excerpt:'Small intentional shifts that transform ordinary days into peaceful experiences.', body:`<p>Peaceful living is not a destination — it is a way of being. It lives in how you brew your tea, water your plants, or walk to the mailbox.</p><p>Slow down one task each day. Notice colors, textures, and small sounds. Let your hands do one thing at a time.</p>` },
+  { slug:'breathing-exercises-relaxation', title:'Gentle Breathing Exercises for Relaxation', cat:'stress-relief', img: IMG.breathing, excerpt:'Three soothing breath practices that calm the nervous system in minutes.', body:`<p>Breath is your built-in calming tool. Try the 4-7-8 breath: inhale 4, hold 7, exhale 8. Repeat three to four cycles.</p><p>Box breathing — 4 in, 4 hold, 4 out, 4 hold — is wonderful before sleep or during anxious moments.</p>` },
+  { slug:'emotional-wellness-aging', title:'Emotional Wellness Tips for Healthy Aging', cat:'emotional-wellness', img: IMG.senior4, excerpt:'Cultivate resilience, joy, and emotional balance through every stage of life.', body:`<p>Emotional wellness in later life means honoring all feelings — joy and grief, excitement and quiet. Journaling, sharing with trusted friends, and gentle self-compassion are powerful practices.</p>` },
+];
+
+const TESTIMONIALS = [
+  { name:'Margaret, 64', img:IMG.senior1, text:'These meditations have become my favorite part of the morning. I feel calmer, lighter, and so much more present with my grandchildren.' },
+  { name:'Robert, 71', img:IMG.senior3, text:'After retirement I felt unmoored. The peaceful living articles gave me a soft, doable path back to joy and routine.' },
+  { name:'Linda, 58', img:IMG.senior2, text:'The breathing exercises eased my anxiety more than anything else I have tried. Truly grateful for this gentle community.' },
+];
+
+const FAQS = [
+  { q:'How do beginners start meditation?', a:'Start with just 5 minutes a day in a quiet, comfortable spot. Focus on your breath. Use a guided audio if helpful. Consistency beats duration.' },
+  { q:'Can mindfulness reduce stress?', a:'Yes. Decades of research show mindfulness lowers cortisol, improves sleep, and reduces anxious thoughts — especially in adults over 50.' },
+  { q:'What are the best calming activities for retirees?', a:'Walking in nature, gardening, gentle yoga, journaling, tea rituals, and connecting with friends are all wonderfully soothing.' },
+  { q:'How long should I meditate daily?', a:'Even 5–10 minutes daily delivers benefits. Many seniors enjoy two short sessions: one in the morning, one before bed.' },
+  { q:'Is meditation safe for older adults?', a:'Absolutely. Meditation is gentle and adaptable. Sit in a chair, lie down, or even practice while walking slowly.' },
+];
+
+const COMMUNITY_STORIES = [
+  { name:'Eleanor, 68', img:IMG.senior1, story:'A year ago, I could not sit still for two minutes. Today, I begin every day with twenty quiet minutes by the window. My blood pressure dropped, and my heart feels lighter.' },
+  { name:'James, 72', img:IMG.senior3, story:'Joining the weekly community circle helped me reconnect after losing my wife. Mindfulness gave me a way to hold the grief gently.' },
+  { name:'Patricia, 60', img:IMG.senior4, story:'I started with one breathing exercise. Now I lead a small meditation group at my local library. It changed everything.' },
+];
+
+// ---------------- COMPONENTS ----------------
+const sectionTitle = (eyebrow, title, sub='') => `
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">${eyebrow}</p>
+    <h2 class="text-4xl md:text-5xl font-heading text-sage-800">${title}</h2>
+    ${sub ? `<p class="mt-4 text-sage-700">${sub}</p>` : ''}
+  </div>`;
+
+const articleCard = (a) => `
+  <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition border border-beige">
+    <img loading="lazy" src="${a.img}" alt="${a.title}" class="w-full h-56 object-cover" />
+    <div class="p-6">
+      <p class="text-xs uppercase tracking-wider text-gold mb-2">${a.cat.replace(/-/g,' ')}</p>
+      <h3 class="text-xl font-heading text-sage-800 mb-2">${a.title}</h3>
+      <p class="text-sage-700 text-sm mb-4">${a.excerpt}</p>
+      <button onclick="toggleAcc('art-${a.slug}', this)" class="text-sage-600 hover:text-sage-800 font-medium text-sm">Read More →</button>
+      <div id="art-${a.slug}" class="accordion-content mt-4 text-sage-700 text-[15px] leading-relaxed">${a.body}</div>
+    </div>
+  </article>`;
+
+const categoryCard = (c) => `
+  <a href="#/category/${c.slug}" class="group bg-white rounded-3xl overflow-hidden border border-beige hover:shadow-lg transition block">
+    <div class="h-44 overflow-hidden"><img loading="lazy" src="${c.img}" alt="${c.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" /></div>
+    <div class="p-5">
+      <h3 class="font-heading text-xl text-sage-800 mb-1">${c.title}</h3>
+      <p class="text-sm text-sage-700">${c.desc}</p>
+      <span class="inline-block mt-3 text-sage-600 group-hover:text-gold text-sm font-medium">Explore →</span>
+    </div>
+  </a>`;
+
+// ---------------- PAGES ----------------
+function HomePage() {
+  return `
+  <!-- HERO -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="uppercase tracking-widest text-sm text-gold mb-3">Mindful Living After 50</p>
+        <h1 class="text-5xl md:text-6xl font-heading text-sage-800 leading-tight">Find calm in every <span class="text-gold">golden</span> moment.</h1>
+        <p class="mt-5 text-lg text-sage-700 max-w-xl">A peaceful sanctuary of meditation, mindfulness, and gentle wellness — thoughtfully crafted for adults over 50.</p>
+        <div class="mt-7 flex flex-wrap gap-4">
+          <a href="#/meditation" class="bg-sage-600 hover:bg-sage-700 transition text-white px-7 py-3 rounded-full font-medium">Start Meditating</a>
+          <a href="#/blog" class="border border-sage-300 text-sage-700 hover:bg-sage-50 transition px-7 py-3 rounded-full font-medium">Read the Blog</a>
+        </div>
+      </div>
+      <div class="relative">
+        <img loading="lazy" src="${IMG.hero}" alt="Peaceful older woman meditating outdoors" class="rounded-[2rem] shadow-xl w-full object-cover" />
+        <div class="hidden md:block absolute -bottom-6 -left-6 bg-cream border border-beige rounded-2xl p-4 shadow">
+          <p class="text-xs text-gold">Daily Practice</p>
+          <p class="font-heading text-lg text-sage-800">Breathe • Pause • Smile</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="py-16 bg-beige/40">
+    <div class="max-w-7xl mx-auto px-5">
+      ${sectionTitle('Wellness Paths','Featured Categories','Soft guidance for every season of your golden life.')}
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        ${CATEGORIES.map(categoryCard).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDING ARTICLES -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-5">
+      ${sectionTitle('From the Journal','Trending Articles')}
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        ${ARTICLES.slice(0,6).map(articleCard).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="py-16 bg-sage-50">
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+      <img loading="lazy" src="${IMG.meditation3}" alt="Senior practicing guided meditation" class="rounded-[2rem] shadow-md" />
+      <div>
+        <p class="uppercase tracking-widest text-sm text-gold mb-2">Meditation & Wellness</p>
+        <h2 class="text-4xl font-heading text-sage-800 mb-4">Daily rituals that bring you home.</h2>
+        <p class="text-sage-700 mb-6">Our guides blend gentle breathwork, body awareness, and contemplative practices — created for ease, not effort. Whether you have five minutes or fifty, there is a practice for you.</p>
+        <ul class="space-y-3 text-sage-800">
+          <li>🌿 Gentle morning awakening meditations</li>
+          <li>🕯️ Evening wind-down for restful sleep</li>
+          <li>🍃 Body scan for relaxation and ease</li>
+          <li>☀️ Gratitude practices for emotional warmth</li>
+        </ul>
+        <a href="#/meditation" class="inline-block mt-7 bg-sage-700 hover:bg-sage-800 transition text-white px-6 py-3 rounded-full">Browse Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY STORIES -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-5">
+      ${sectionTitle('Voices of the Circle','Community Stories')}
+      <div class="grid md:grid-cols-3 gap-7">
+        ${COMMUNITY_STORIES.map(s => `
+          <div class="bg-white rounded-3xl p-7 border border-beige shadow-sm">
+            <img loading="lazy" src="${s.img}" alt="${s.name}" class="w-20 h-20 rounded-full object-cover mb-4" />
+            <p class="text-sage-700 italic">"${s.story}"</p>
+            <p class="mt-4 font-heading text-sage-800">— ${s.name}</p>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-16 bg-lavender/20">
+    <div class="max-w-7xl mx-auto px-5">
+      ${sectionTitle('Kind Words','Testimonials')}
+      <div class="grid md:grid-cols-3 gap-7">
+        ${TESTIMONIALS.map(t => `
+          <div class="bg-cream rounded-3xl p-7 shadow-sm border border-beige">
+            <div class="flex items-center gap-4 mb-4">
+              <img loading="lazy" src="${t.img}" alt="${t.name}" class="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <p class="font-heading text-sage-800">${t.name}</p>
+                <p class="text-gold text-sm">★★★★★</p>
+              </div>
+            </div>
+            <p class="text-sage-700">"${t.text}"</p>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-5 text-center bg-sage-700 rounded-[2.5rem] p-10 md:p-14 text-cream">
+      <p class="uppercase tracking-widest text-sm text-gold mb-2">Stay Connected</p>
+      <h2 class="text-4xl font-heading mb-4">A gentle letter, once a week.</h2>
+      <p class="text-sage-100/90 mb-6">Receive a calming meditation, a reflection, and one beautiful idea — straight to your inbox.</p>
+      <form onsubmit="event.preventDefault(); subscribeNewsletter(this);" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+        <input required type="email" placeholder="Your email address" class="flex-1 px-5 py-3 rounded-full text-sage-800" />
+        <button class="bg-gold hover:bg-yellow-700 transition text-white px-6 py-3 rounded-full font-medium">Subscribe</button>
+      </form>
+      <p id="newsMsg" class="mt-3 text-sm text-gold hidden">Thank you — your peaceful letter is on its way 🌿</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-beige/40">
+    <div class="max-w-3xl mx-auto px-5">
+      ${sectionTitle('Common Questions','Frequently Asked')}
+      <div class="space-y-3">
+        ${FAQS.map((f,i)=>`
+          <div class="bg-white border border-beige rounded-2xl">
+            <button onclick="toggleAcc('faq-${i}', this)" class="w-full flex justify-between items-center px-6 py-4 text-left font-heading text-lg text-sage-800">
+              <span>${f.q}</span><span class="text-gold text-2xl leading-none">+</span>
+            </button>
+            <div id="faq-${i}" class="accordion-content px-6 pb-5 text-sage-700">${f.a}</div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="uppercase tracking-widest text-sm text-gold mb-2">Reach Out</p>
+        <h2 class="text-4xl font-heading text-sage-800 mb-4">We'd love to hear from you.</h2>
+        <p class="text-sage-700 mb-6">Have a question, a story to share, or a gentle suggestion? Our doors are always open.</p>
+        <ul class="space-y-2 text-sage-800">
+          <li>📧 mindfulgoldenlife@gmail.com</li>
+          <li>📞 (505) 555-3904</li>
+          <li>📍 711 Sunrise Valley Rd, Santa Fe, NM 87501</li>
+        </ul>
+      </div>
+      <img loading="lazy" src="${IMG.seniorCouple}" alt="Senior couple enjoying peaceful moment" class="rounded-3xl shadow-md" />
+    </div>
+  </section>
+  `;
+}
+
+function AboutPage() {
+  return `
+  <section class="max-w-5xl mx-auto px-5 py-16">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">Our Story</p>
+    <h1 class="text-5xl font-heading text-sage-800 mb-6">About Mindful Golden Life</h1>
+    <img loading="lazy" src="${IMG.forest}" alt="Peaceful forest path" class="rounded-3xl shadow-md mb-8" />
+    <div class="prose-lg text-sage-700 space-y-5 text-lg">
+      <p>Mindful Golden Life began with a simple question: what if growing older could feel like coming home to ourselves? We believe the years after 50 are not a winding down, but a tender invitation to live more deeply, more slowly, and more meaningfully.</p>
+      <p>Our blog is a quiet corner of the internet dedicated to mindfulness, meditation, and peaceful living. Every article, every meditation, and every reflection is crafted with one reader in mind: the adult who is ready to embrace stillness, savor each breath, and tend gently to the heart.</p>
+      <h2 class="text-3xl font-heading text-sage-800 mt-10">Our Mission</h2>
+      <p>To offer accessible, senior-friendly mindfulness resources that nurture emotional wellness, ease stress, and bring joy to everyday life.</p>
+      <h2 class="text-3xl font-heading text-sage-800 mt-10">Our Values</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Gentleness</strong> — always meeting you where you are.</li>
+        <li><strong>Simplicity</strong> — practices that fit naturally into daily life.</li>
+        <li><strong>Warmth</strong> — a community that feels like family.</li>
+        <li><strong>Trust</strong> — content grounded in care and credibility.</li>
+      </ul>
+    </div>
+  </section>`;
+}
+
+function BlogPage() {
+  return `
+  <section class="max-w-7xl mx-auto px-5 py-16">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">The Journal</p>
+    <h1 class="text-5xl font-heading text-sage-800 mb-10">Mindful Reads</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">${ARTICLES.map(articleCard).join('')}</div>
+  </section>`;
+}
+
+function MeditationPage() {
+  const guides = [
+    { title:'5-Minute Morning Awakening', img:IMG.sunrise, desc:'A short gentle practice to greet the day with calm awareness.', body:'<p>Sit upright. Place hands on your lap. Take 5 deep breaths feeling the body wake softly. Visualize warm golden light filling your chest. Open your eyes with a gentle smile.</p>' },
+    { title:'10-Minute Stress Release', img:IMG.candle, desc:'Soften tension in the shoulders, jaw, and breath.', body:'<p>Begin with a long exhale. Scan slowly from forehead to toes, releasing each area. Breathe into any tightness for 3 cycles. End with hand on heart.</p>' },
+    { title:'15-Minute Body Scan', img:IMG.meditation3, desc:'A restorative full-body relaxation guide.', body:'<p>Lie comfortably. Move attention from feet to head, noticing without changing. Allow each body part to soften with the exhale.</p>' },
+    { title:'Bedtime Wind-Down', img:IMG.meditation2, desc:'Settle the mind for restful, restorative sleep.', body:'<p>Practice 4-7-8 breathing for 4 rounds. Then mentally name 3 things you appreciated about today. Let the body sink into rest.</p>' },
+    { title:'Loving-Kindness Practice', img:IMG.senior2, desc:'Cultivate warmth toward yourself and others.', body:'<p>Silently repeat: May I be peaceful. May I be well. Then extend the wish to a loved one, a neutral person, and all beings.</p>' },
+    { title:'Mindful Walking', img:IMG.walking, desc:'Bring meditation into gentle movement outdoors.', body:'<p>Walk slowly. Feel each foot lifting, moving, landing. Match breath to steps. Notice the sky, sounds, and small beauties around you.</p>' },
+  ];
+  return `
+  <section class="max-w-7xl mx-auto px-5 py-16">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">Practice Library</p>
+    <h1 class="text-5xl font-heading text-sage-800 mb-10">Meditation Guides</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+      ${guides.map((g,i)=>`
+        <div class="bg-white rounded-3xl overflow-hidden border border-beige shadow-sm">
+          <img loading="lazy" src="${g.img}" alt="${g.title}" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <h3 class="font-heading text-xl text-sage-800 mb-2">${g.title}</h3>
+            <p class="text-sage-700 text-sm mb-4">${g.desc}</p>
+            <button onclick="toggleAcc('med-${i}', this)" class="text-sage-600 hover:text-sage-800 font-medium text-sm">View Guide →</button>
+            <div id="med-${i}" class="accordion-content mt-4 text-sage-700 text-[15px]">${g.body}</div>
+          </div>
+        </div>`).join('')}
+    </div>
+  </section>`;
+}
+
+function CommunityPage() {
+  return `
+  <section class="max-w-6xl mx-auto px-5 py-16">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">Together in Stillness</p>
+    <h1 class="text-5xl font-heading text-sage-800 mb-6">Our Community</h1>
+    <img loading="lazy" src="${IMG.community}" alt="Senior community" class="rounded-3xl shadow-md mb-10" />
+    <p class="text-lg text-sage-700 mb-10 max-w-3xl">Mindful Golden Life is more than a blog — it's a warm circle of readers, meditators, and seekers from all walks of life. We gather (virtually and in spirit) to share, reflect, and grow.</p>
+    <div class="grid md:grid-cols-3 gap-7">
+      ${COMMUNITY_STORIES.map(s => `
+        <div class="bg-white rounded-3xl p-7 border border-beige shadow-sm">
+          <img loading="lazy" src="${s.img}" alt="${s.name}" class="w-24 h-24 rounded-full object-cover mb-4" />
+          <p class="text-sage-700 italic">"${s.story}"</p>
+          <p class="mt-4 font-heading text-sage-800">— ${s.name}</p>
+        </div>`).join('')}
+    </div>
+  </section>`;
+}
+
+function ContactPage() {
+  return `
+  <section class="max-w-5xl mx-auto px-5 py-16">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">Say Hello</p>
+    <h1 class="text-5xl font-heading text-sage-800 mb-6">Contact Us</h1>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="space-y-4 text-sage-700">
+        <p class="text-lg">We welcome your thoughts, questions, and reflections. Reach out — we read every note with care.</p>
+        <ul class="space-y-2 text-sage-800">
+          <li><strong>Email:</strong> mindfulgoldenlife@gmail.com</li>
+          <li><strong>Phone:</strong> (505) 555-3904</li>
+          <li><strong>Address:</strong> 711 Sunrise Valley Rd, Santa Fe, NM 87501</li>
+        </ul>
+        <img loading="lazy" src="${IMG.tea}" alt="Tea cup" class="rounded-3xl shadow-md mt-6" />
+      </div>
+      <form onsubmit="event.preventDefault(); contactSubmit(this);" class="bg-white border border-beige rounded-3xl p-7 space-y-4 shadow-sm">
+        <input required class="w-full px-4 py-3 rounded-xl border border-beige bg-cream" placeholder="Your name" />
+        <input required type="email" class="w-full px-4 py-3 rounded-xl border border-beige bg-cream" placeholder="Your email" />
+        <input class="w-full px-4 py-3 rounded-xl border border-beige bg-cream" placeholder="Subject" />
+        <textarea required rows="5" class="w-full px-4 py-3 rounded-xl border border-beige bg-cream" placeholder="Your message"></textarea>
+        <button class="w-full bg-sage-700 hover:bg-sage-800 transition text-white py-3 rounded-full font-medium">Send Message</button>
+        <p id="contactMsg" class="text-center text-sage-600 hidden">Thank you — we'll reply soon 🌿</p>
+      </form>
+    </div>
+  </section>`;
+}
+
+function CategoryPage(slug) {
+  const cat = CATEGORIES.find(c => c.slug === slug);
+  if (!cat) return NotFoundPage();
+  const items = ARTICLES.filter(a => a.cat === slug);
+  return `
+  <section class="max-w-7xl mx-auto px-5 py-16">
+    <p class="uppercase tracking-widest text-sm text-gold mb-2">Category</p>
+    <h1 class="text-5xl font-heading text-sage-800 mb-4">${cat.title}</h1>
+    <p class="text-sage-700 text-lg max-w-2xl mb-10">${cat.desc}</p>
+    <img loading="lazy" src="${cat.img}" alt="${cat.title}" class="rounded-3xl shadow-md mb-12 w-full max-h-96 object-cover" />
+    ${items.length ? `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">${items.map(articleCard).join('')}</div>` :
+      `<p class="text-sage-700">More articles coming soon. Meanwhile, explore our <a href="#/blog" class="text-sage-600 underline">full blog</a>.</p>`}
+  </section>`;
+}
+
+function LegalPage(type) {
+  const content = {
+    privacy: { title:'Privacy Policy', body:`<p>At Mindful Golden Life, your privacy and peace of mind matter deeply. We collect only the information needed to provide you with thoughtful content — such as your email when you subscribe to our newsletter.</p><h2>What We Collect</h2><ul><li>Email address (for newsletter)</li><li>Anonymous analytics via Google Analytics</li><li>Cookies for site preferences</li></ul><h2>How We Use Data</h2><p>We use data only to deliver our newsletter, improve the site, and understand how visitors engage with content. We never sell your information.</p><h2>Your Rights</h2><p>You may unsubscribe at any time or request deletion of your data by emailing mindfulgoldenlife@gmail.com.</p>` },
+    terms: { title:'Terms & Conditions', body:`<p>By using Mindful Golden Life, you agree to use the content for personal, non-commercial purposes. Our articles and guides are for educational and inspirational purposes only and are not a substitute for medical, psychological, or professional advice.</p><h2>Intellectual Property</h2><p>All written content, images, and materials are property of Mindful Golden Life unless otherwise noted. Please do not reproduce without permission.</p><h2>Disclaimer</h2><p>Consult your healthcare provider before beginning any new wellness practice.</p>` },
+    refund: { title:'Refund Policy', body:`<p>Our blog content and newsletter are offered free of charge. Should we introduce any paid offerings in the future (such as guided meditation courses), refunds will be available within 14 days of purchase if you are not satisfied.</p><h2>How to Request</h2><p>Email mindfulgoldenlife@gmail.com with your order details. We process refunds within 5–7 business days.</p>` },
+  };
+  const c = content[type];
+  return `
+  <section class="max-w-3xl mx-auto px-5 py-16">
+    <h1 class="text-4xl md:text-5xl font-heading text-sage-800 mb-8">${c.title}</h1>
+    <div class="prose text-sage-700 space-y-4 [&_h2]:font-heading [&_h2]:text-2xl [&_h2]:text-sage-800 [&_h2]:mt-8 [&_ul]:list-disc [&_ul]:pl-6">${c.body}</div>
+  </section>`;
+}
+
+function NotFoundPage() {
+  return `
+  <section class="max-w-3xl mx-auto px-5 py-24 text-center">
+    <p class="text-7xl font-heading text-gold mb-4">404</p>
+    <h1 class="text-4xl font-heading text-sage-800 mb-4">This path is quiet.</h1>
+    <p class="text-sage-700 mb-8">The page you are looking for cannot be found. Perhaps a peaceful breath, and a return home?</p>
+    <a href="#/" class="bg-sage-700 hover:bg-sage-800 transition text-white px-7 py-3 rounded-full">Return Home</a>
+  </section>`;
+}
+
+// ---------------- ROUTER ----------------
+function render() {
+  const hash = location.hash.replace(/^#/, '') || '/';
+  const app = document.getElementById('app');
+  let html = '';
+  if (hash === '/' || hash === '') html = HomePage();
+  else if (hash === '/about') html = AboutPage();
+  else if (hash === '/blog') html = BlogPage();
+  else if (hash === '/meditation') html = MeditationPage();
+  else if (hash === '/community') html = CommunityPage();
+  else if (hash === '/contact') html = ContactPage();
+  else if (hash === '/privacy') html = LegalPage('privacy');
+  else if (hash === '/terms') html = LegalPage('terms');
+  else if (hash === '/refund') html = LegalPage('refund');
+  else if (hash.startsWith('/category/')) html = CategoryPage(hash.replace('/category/',''));
+  else html = NotFoundPage();
+  app.innerHTML = `<div class="fade-in">${html}</div>`;
+  window.scrollTo(0,0);
+
+  // active link
+  document.querySelectorAll('.nav-link').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + hash);
+  });
+
+  // analytics
+  if (window.gtag) gtag('event', 'page_view', { page_path: hash });
+}
+
+window.addEventListener('hashchange', render);
+window.addEventListener('DOMContentLoaded', () => {
+  render();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieBanner').classList.remove('hidden');
+  }
+});
+
+// ---------------- INTERACTIONS ----------------
+function toggleAcc(id, btn) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.toggle('open');
+  if (btn) {
+    const isOpen = el.classList.contains('open');
+    if (btn.textContent.includes('More') || btn.textContent.includes('Less'))
+      btn.textContent = isOpen ? 'Read Less ↑' : 'Read More →';
+    if (btn.textContent.includes('Guide'))
+      btn.textContent = isOpen ? 'Hide Guide ↑' : 'View Guide →';
+    const plus = btn.querySelector('span:last-child');
+    if (plus && (plus.textContent === '+' || plus.textContent === '−')) plus.textContent = isOpen ? '−' : '+';
+  }
+}
+
+function subscribeNewsletter(form) {
+  form.reset();
+  const msg = document.getElementById('newsMsg');
+  msg.classList.remove('hidden');
+  if (window.gtag) gtag('event', 'newsletter_subscribe');
+}
+
+function contactSubmit(form) {
+  form.reset();
+  document.getElementById('contactMsg').classList.remove('hidden');
+  if (window.gtag) gtag('event', 'contact_submit');
+}
+
+function acceptCookies() {
+  localStorage.setItem('cookieConsent','accepted');
+  document.getElementById('cookieBanner').classList.add('hidden');
+}
+function declineCookies() {
+  localStorage.setItem('cookieConsent','declined');
+  document.getElementById('cookieBanner').classList.add('hidden');
+}
+
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+document.getElementById('mobileMenu').addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') document.getElementById('mobileMenu').classList.add('hidden');
+});
+</script>
 </body>
 </html>
